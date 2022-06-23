@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const arr = []
+        function random(){
+            for (i=0;i<=49;i++){
+                arr.push(Math.floor(Math.random()*100)+1)
+            }
+            document.write("Случайно:" + arr)
+        }
+        random()
+        function order(){
+            arr.sort((a,b) => a - b)
+            document.write("<br>")
+            document.write("По порядку:" + arr)
+        }
+        order()
+        function arithmeticmean(){
+            var sum = 0
+            for (var i=0; i<arr.length; i++){
+                sum=sum+arr[i]
+            }
+            var avg = sum / arr.length
+            document.write("<br>")
+            document.write("Cреднее арифмитическое:" + avg)
+        }
+        arithmeticmean()
+    </script>
+</body>
+</html>
